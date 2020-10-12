@@ -9,19 +9,17 @@ import UIKit
 
 class PlusViewController: UIViewController {
 
-    @IBOutlet weak var plusText1: UITextField!
-    @IBOutlet weak var plusText2: UITextField!
-    @IBOutlet weak var plusButton: UIButton!
-    @IBOutlet weak var plusLabel: UILabel!
+    @IBOutlet private weak var plusText1: UITextField!
+    @IBOutlet private weak var plusText2: UITextField!
+    @IBOutlet private weak var plusButton: UIButton!
+    @IBOutlet private weak var plusLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.yellow
+        view.backgroundColor = .yellow
         plusText1.keyboardType = .numberPad
         plusText2.keyboardType = .numberPad
-
-
     }
     
     @IBAction func plusButtonAction(_ sender: Any) {
@@ -32,21 +30,5 @@ class PlusViewController: UIViewController {
         plusLabel.text = String(plusnum1 + plusnum2)
         view.endEditing(true)
 
-        
     }
-//    
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//            view.endEditing(true)
-//        }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

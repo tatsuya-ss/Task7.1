@@ -8,15 +8,15 @@
 import UIKit
 
 class MinusViewController: UIViewController {
-
-    @IBOutlet weak var minusText1: UITextField!
-    @IBOutlet weak var minusText2: UITextField!
-    @IBOutlet weak var minusButton: UIButton!
-    @IBOutlet weak var minusLabel: UILabel!
+//privateをつける
+    @IBOutlet private weak var minusText1: UITextField!
+    @IBOutlet private weak var minusText2: UITextField!
+    @IBOutlet private weak var minusButton: UIButton!
+    @IBOutlet private weak var minusLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = UIColor.green
+ // UIColorはいらない
+        view.backgroundColor = .green
         minusText1.keyboardType = .numberPad
         minusText2.keyboardType = .numberPad
 
@@ -31,20 +31,4 @@ class MinusViewController: UIViewController {
         view.endEditing(true)
 
     }
-    
-//    
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//            view.endEditing(true)
-//        }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
